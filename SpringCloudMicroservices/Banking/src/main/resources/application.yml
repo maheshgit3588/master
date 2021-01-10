@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /eltropy/bank/solution
+spring:
+  application:
+    name: ELTROPY-BANK-SOLUTIONS
+users:
+  servicename: ELTROPY-BANK-USERS-SERVICE
+accounts:
+  servicename: ELTROPY-BANK-ACCOUNT-SERVICE

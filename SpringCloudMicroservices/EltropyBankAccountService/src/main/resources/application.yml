@@ -1,0 +1,7 @@
+server:
+  port: 8082
+  servlet:
+    contextPath: /eltropy/bank/accounting
+spring:
+  application:
+    name: ELTROPY-BANK-ACCOUNT-SERVICE

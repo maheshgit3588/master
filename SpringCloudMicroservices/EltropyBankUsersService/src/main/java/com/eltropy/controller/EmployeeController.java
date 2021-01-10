@@ -3,10 +3,7 @@ package com.eltropy.controller;
 import com.eltropy.model.Employee;
 import com.eltropy.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -17,9 +14,9 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @RequestMapping(path = "/save", method = RequestMethod.GET)
-    public Employee save() {
-        return employeeService.save(employee(1));
+    @RequestMapping(method = RequestMethod.POST)
+    public Employee save(@RequestBody Employee employee) {
+        return employeeService.save(employee);
     }
 
     @RequestMapping(path = "/get/{id}", method = RequestMethod.GET)
