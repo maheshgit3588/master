@@ -24,14 +24,5 @@ public class CustomerController {
     public ResponseEntity<Customer> save(@PathVariable("id") String id){
         return ResponseEntity.ok(customerService.findById(Long.parseLong(id)));
     }
-
-    public static Customer customer(int identifier) {
-        return Customer.builder()
-                .createdAt(LocalDateTime.now())
-                .updatedAt(LocalDateTime.now())
-                .name("ddd" + identifier)
-                .email("test@test.com")
-                .occupation("Software engineer")
-                .build();
-    }
+    
 }

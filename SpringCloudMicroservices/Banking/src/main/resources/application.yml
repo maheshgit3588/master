@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    contextPath: /eltropy/bank/solution
+    contextPath: /eltropy/bank
 spring:
   application:
     name: ELTROPY-BANK-SOLUTIONS
