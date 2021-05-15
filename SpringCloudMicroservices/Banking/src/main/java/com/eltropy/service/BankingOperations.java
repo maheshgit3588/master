@@ -9,6 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class BankingOperations {
 
@@ -38,4 +41,6 @@ public class BankingOperations {
         ResponseEntity<Account> responseEntity = restTemplate.postForEntity(url, account, Account.class);
         return responseEntity.getBody();
     }
+
+
 }
